@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Konosuba</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_favorite">Favorite</string>
+    <string name="menu_profile">Profile</string>
+    <string name="empty_favorite">No favorite list.</string>
+    <string name="search_text">Search for what you want to find</string>
+    <string name="about_me">About Me</string>
+    <string name="back">Back</string>
+
+    <string name="favorite">Favorite</string>
+    <string name="delete_favorite">Remove from Favorite</string>
+    <string name="add_favorite">Add to Favorite</string>
+    <string name="empty_data">Empty Data</string>
+
+    <string name="title_home">Home</string>
+    <string name="email_author">zhaqianroufa@gmail.com</string>
+    <string name="name_author">Alfauzi</string>
+</resources>
