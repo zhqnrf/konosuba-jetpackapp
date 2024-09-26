@@ -99,7 +99,6 @@ fun DetailInformation(
             modifier = Modifier
                 .verticalScroll(rememberScrollState())
                 .padding(bottom = 16.dp)
-                .padding(16.dp) // Padding di sekitar kolom
         ) {
 
             Image(
@@ -108,18 +107,17 @@ fun DetailInformation(
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(250.dp) // Tinggi yang disesuaikan untuk tata letak visual yang lebih baik
-                    .clip(CircleShape) // Sudut membulat
+                    .height(250.dp)
                     .testTag("scrollToBottom")
             )
             Spacer(modifier = Modifier.height(16.dp))
             Text(
                 text = name,
                 fontWeight = FontWeight.Bold,
-                fontSize = 24.sp, // Ukuran font lebih besar
+                fontSize = 24.sp,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp)
+                    .padding(16.dp)
             )
             Spacer(modifier = Modifier.height(8.dp))
 
@@ -127,6 +125,7 @@ fun DetailInformation(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
+                    .padding(16.dp)
             ) {
                 InfoRow(icon = Icons.Default.Star, text = rating.toString()) // Rating
                 InfoRow(icon = Icons.Default.PersonOutline, text = positional) // Ikon untuk posisi
@@ -141,7 +140,7 @@ fun DetailInformation(
                 fontSize = 16.sp,
                 lineHeight = 28.sp,
                 modifier = Modifier
-                    .padding(horizontal = 16.dp)
+                    .padding(16.dp)
                     .fillMaxWidth()
             )
             Spacer(modifier = Modifier.height(8.dp))

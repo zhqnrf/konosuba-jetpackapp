@@ -3,10 +3,12 @@ package com.example.compose.ui.screen
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
@@ -17,6 +19,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
@@ -168,10 +171,13 @@ fun CharacterItem(
                 contentDescription = null,
                 modifier = Modifier
                     .size(64.dp)
-                    .padding(end = 16.dp)
+                    .clip(CircleShape)
+                    .border(width = 3.dp, color = MaterialTheme.colors.primary, shape = CircleShape)
             )
             Column(
-                modifier = Modifier.weight(1f)
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(start = 10.dp, end = 0.dp, top = 0.dp, bottom = 0.dp)
             ) {
                 Text(text = name, style = MaterialTheme.typography.h6)
                 InfoRow(icon = Icons.Default.Star, text = rating.toString())
